@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Grade Calculation © Guru</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="card" style="margin-top:20px !important;border:1px solid #ccc;">
+            <div class="card-header bg-primary" style="padding: 10px;font-weight: bold;font-size: 18px;">E3 Sem1 Cse SGPA Calculator</div>
+            <div class="card-body" style="padding: 10px;">
+	            <form>
+	               <div class="row">
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select USP Grade :</label>
+	                        <select class="form-control" id="usp_g">
+	                           <option value="1000">Optional</option>
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	  
+	                     </div>
+	                  </div>
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select  CNS Grade :</label>
+	                        <select class="form-control" id="cns_g">
+	                           <option value="1000">Optional</option>
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	               </div>
+	               <div class="row">
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select OOAD Grade :</label>
+	                        <select class="form-control" id="ooad_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select CD grade :</label>
+	                        <select class="form-control" id="cd_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	               </div>
+	               <div class="row">
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select ML grade :</label>
+	                        <select class="form-control" id="ml_g">
+	                           <option value="1000">Optional</option>
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select MiniProject grade:</label>
+	                        <select class="form-control" id="mini_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	               </div>
+	               <div class="row">
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select NT Grade:</label>
+	                        <select class="form-control" id="nt_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select CC grade :</label>
+	                        <select class="form-control" id="cc_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	               </div>
+	              <!--  <div class="row">
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select SE Grade :</label>
+	                        <select class="form-control" id="se_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select SE Lab grade :</label>
+	                        <select class="form-control" id="selab">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	                 </div>
+	               </div> -->
+	               <div class="card-footer bg-primary" style="padding: 10px;font-weight: bold;"><button class="btn btn-success" onclick="calculate()"> Submit </button></div>
+	            </form>
+         </div>
+      </div>
+      <div class="foooter" style="margin-top:15px; background-color: black;color: white;font-weight: bold;text-align: center;padding: 8px;">Designed & Developed By GuruNadh 2022 © Guru</div>
+      <script type="text/javascript">
+         function calculate(){
+         	let m = [];
+         	let usp_g = parseInt(document.getElementById('usp_g').value);
+         	let cns_g = parseInt(document.getElementById('cns_g').value);
+         	let ml_g = parseInt(document.getElementById('ml_g').value);
+
+         	if(usp_g!=1000 && ml_g!=1000){
+         		m[0] = usp_g*4;
+         		m[1] = ml_g*4;
+         	}
+         	if(usp_g!=1000 && cns_g!=1000){
+         		m[0] = usp_g*4;
+         		m[1] = cns_g*4;
+         	}
+         	if(cns_g!=1000 && ml_g!=1000){
+         		m[0] = cns_g*4;
+         		 m[1] = ml_g*4;
+         	}
+         	if(cns_g!=1000 && usp_g!=1000){
+         		m[0] = cns_g*4;
+         		 m[1] = usp_g*4;
+         	}
+         	console.log(usp_g);
+         	console.log(cns_g);
+         	let ooad_g = parseInt(document.getElementById('ooad_g').value)*4;
+         	console.log(ooad_g);
+         	let cd_g = parseInt(document.getElementById('cd_g').value)*4;
+         	console.log(cd_g);
+         	console.log(ml_g);
+         	let mini_g = parseInt(document.getElementById('mini_g').value)*4;
+         	console.log(mini_g);
+         	let nt_g = parseInt(document.getElementById('nt_g').value)*2;
+         	console.log(nt_g);
+         	let cc_g = parseInt(document.getElementById('cc_g').value)*2;
+         	console.log(cc_g);
+         	// let se_g = parseInt(document.getElementById('se_g').value)*4;
+         	// let selab = parseInt(document.getElementById('selab').value)*2;
+         
+         	let s = m[0] + m[1] + ooad_g + cd_g + mini_g + nt_g + cc_g;
+         	alert("Your SGPA : " + Math.round(s/24));
+         }
+      </script>
+   </body>
+</html>
