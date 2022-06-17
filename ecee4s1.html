@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Grade Calculation © Guru</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="card" style="margin-top:20px !important;border:1px solid #ccc;">
+            <div class="card-header bg-primary" style="padding: 10px;font-weight: bold;font-size: 18px;">E4 Sem1 ECE SGPA Calculator </div>
+            <div class="card-body" style="padding: 10px;">
+	               <div class="row">
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select Subject 1 Grade :</label>
+	                        <select class="form-control" id="es_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	  
+	                     </div>
+	                  </div>
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select  Subject 2 Grade :</label>
+	                        <select class="form-control" id="iot_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	               </div>
+	               <div class="row">
+	                  <div class="col-sm-5">
+	                     <div class="form-group">
+	                        <label for="sel1">Select Subject 3 Grade :</label>
+	                        <select class="form-control" id="acc_g">
+	                           <option value="10">Ex</option>
+	                           <option value="9">A</option>
+	                           <option value="8">B</option>
+	                           <option value="7">C</option>
+	                           <option value="6">D</option>
+	                           <option value="0">F</option>
+	                        </select>
+	                        
+	                     </div>
+	                  </div>
+	                  <div class="col-sm-5">
+                      <div class="form-group">
+                        <label for="sel1">Select Subject 4 grade :</label>
+                        <select class="form-control" id="sub4_g">
+                           <option value="10">Ex</option>
+                           <option value="9">A</option>
+                           <option value="8">B</option>
+                           <option value="7">C</option>
+                           <option value="6">D</option>
+                           <option value="0">F</option>
+                        </select>
+                     </div>
+	                  </div>
+					  
+	                  <div class="col-sm-5">
+						<div class="form-group">
+						  <label for="sel1">Select Project grade :</label>
+						  <select class="form-control" id="pro_g">
+							 <option value="10">Ex</option>
+							 <option value="9">A</option>
+							 <option value="8">B</option>
+							 <option value="7">C</option>
+							 <option value="6">D</option>
+							 <option value="0">F</option>
+						  </select>
+					   </div>
+						</div>
+	               </div>
+                 
+	               <div class="card-footer bg-primary" style="padding: 10px;font-weight: bold;"><button class="btn btn-success" onclick="calculate()"> Submit </button></div>
+         </div>
+      </div>
+      <div class="foooter" style="margin-top:15px; background-color: black;color: white;font-weight: bold;text-align: center;padding: 8px;">Designed & Developed By GuruNadh 2022 © Guru</div>
+      <script type="text/javascript">
+         function calculate(){
+         	let m = 0;
+         	var idDiv = ['es_g','acc_g','iot_g','pro_g','sub4_g'];
+
+         	for (let i=0;i<idDiv.length;i++){
+         		let ss = (parseInt(document.getElementById(idDiv[i]).value));
+         		if(idDiv[i]!='pro_g')
+         			m+=(ss)*4;
+            else
+               m+=ss*3;
+         	}
+         	alert("Your SGPA : " + (m/19).toFixed(2) +'😍');
+         }
+      </script>
+   </body>
+</html>
