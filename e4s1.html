@@ -12,13 +12,12 @@
    <body>
       <div class="container">
          <div class="card" style="margin-top:20px !important;border:1px solid #ccc;">
-            <div class="card-header bg-primary" style="padding: 10px;font-weight: bold;font-size: 18px;">E4 Sem1 CSE SGPA Calculator</div>
+            <div class="card-header bg-primary" style="padding: 10px;font-weight: bold;font-size: 18px;">E4 Sem1 SGPA Calculator (For All Branches Except ECE )</div>
             <div class="card-body" style="padding: 10px;">
-	            <form>
 	               <div class="row">
 	                  <div class="col-sm-5">
 	                     <div class="form-group">
-	                        <label for="sel1">Select Environmental Science Grade :</label>
+	                        <label for="sel1">Select Subject 1 Grade :</label>
 	                        <select class="form-control" id="es_g">
 	                           <option value="10">Ex</option>
 	                           <option value="9">A</option>
@@ -32,9 +31,8 @@
 	                  </div>
 	                  <div class="col-sm-5">
 	                     <div class="form-group">
-	                        <label for="sel1">Select  IOT Grade :</label>
+	                        <label for="sel1">Select  Subject 2 Grade :</label>
 	                        <select class="form-control" id="iot_g">
-	                           <option value="1000">Optional</option>
 	                           <option value="10">Ex</option>
 	                           <option value="9">A</option>
 	                           <option value="8">B</option>
@@ -49,8 +47,8 @@
 	               <div class="row">
 	                  <div class="col-sm-5">
 	                     <div class="form-group">
-	                        <label for="sel1">Select Advanced Cloud Computing Grade :</label>
-	                        <select class="form-control" id="cs_g">
+	                        <label for="sel1">Select Subject 3 Grade :</label>
+	                        <select class="form-control" id="acc_g">
 	                           <option value="10">Ex</option>
 	                           <option value="9">A</option>
 	                           <option value="8">B</option>
@@ -62,119 +60,37 @@
 	                     </div>
 	                  </div>
 	                  <div class="col-sm-5">
-	                     <div class="form-group">
-	                        <label for="sel1">Select Managerial Economics grade :</label>
-	                        <select class="form-control" id="me_g">
-	                           <option value="1000">Optional</option>
-	                           <option value="10">Ex</option>
-	                           <option value="9">A</option>
-	                           <option value="8">B</option>
-	                           <option value="7">C</option>
-	                           <option value="6">D</option>
-	                           <option value="0">F</option>
-	                        </select>
-	                     </div>
-                      <div class="col-sm-5">
-	                     <div class="form-group">
-	                        <label for="sel1">Select Project grade :</label>
-	                        <select class="form-control" id="pro_g">
-	                           <option value="10">Ex</option>
-	                           <option value="9">A</option>
-	                           <option value="8">B</option>
-	                           <option value="7">C</option>
-	                           <option value="6">D</option>
-	                           <option value="0">F</option>
-	                        </select>
-	                     </div>
+                      <div class="form-group">
+                        <label for="sel1">Select Project grade :</label>
+                        <select class="form-control" id="pro_g">
+                           <option value="10">Ex</option>
+                           <option value="9">A</option>
+                           <option value="8">B</option>
+                           <option value="7">C</option>
+                           <option value="6">D</option>
+                           <option value="0">F</option>
+                        </select>
+                     </div>
 	                  </div>
 	               </div>
-	              <!--  <div class="row">
-	                  <div class="col-sm-5">
-	                     <div class="form-group">
-	                        <label for="sel1">Select SE Grade :</label>
-	                        <select class="form-control" id="se_g">
-	                           <option value="10">Ex</option>
-	                           <option value="9">A</option>
-	                           <option value="8">B</option>
-	                           <option value="7">C</option>
-	                           <option value="6">D</option>
-	                           <option value="0">F</option>
-	                        </select>
-	                        
-	                     </div>
-	                  </div>
-	                  <div class="col-sm-5">
-	                     <div class="form-group">
-	                        <label for="sel1">Select SE Lab grade :</label>
-	                        <select class="form-control" id="selab">
-	                           <option value="10">Ex</option>
-	                           <option value="9">A</option>
-	                           <option value="8">B</option>
-	                           <option value="7">C</option>
-	                           <option value="6">D</option>
-	                           <option value="0">F</option>
-	                        </select>
-	                        
-	                     </div>
-	                  </div>
-	                 </div>
-	               </div> -->
+                 
 	               <div class="card-footer bg-primary" style="padding: 10px;font-weight: bold;"><button class="btn btn-success" onclick="calculate()"> Submit </button></div>
-	            </form>
          </div>
-      </div>
-      <div class="card bg-warning text-center p-3 mt-3">
-      	<!-- hitwebcounter Code START -->
-		<a href="https://www.hitwebcounter.com" target="_blank">
-		<img src="https://hitwebcounter.com/counter/counter.php?page=7945626&style=0009&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter"   border="0" /></a>     
       </div>
       <div class="foooter" style="margin-top:15px; background-color: black;color: white;font-weight: bold;text-align: center;padding: 8px;">Designed & Developed By GuruNadh 2022 © Guru</div>
       <script type="text/javascript">
          function calculate(){
          	let m = 0;
-         	var idDiv = ['es_g','acc_g','iot_g','me_g','pro_g'];
+         	var idDiv = ['es_g','acc_g','iot_g','pro_g'];
 
          	for (let i=0;i<idDiv.length;i++){
          		let ss = (parseInt(document.getElementById(idDiv[i]).value));
-         		if(ss!=1000 && idDiv[i]!='pro_g')
+         		if(idDiv[i]!='pro_g')
          			m+=(ss)*4;
-            if(idDiv[i]=='pro_g')
+            else
                m+=ss*3;
          	}
-         	// let dm_g = parseInt(document.getElementById('dm_g').value);
-         	// let cs_g = parseInt(document.getElementById('cs_g').value);
-         	// let tel_g = parseInt(document.getElementById('tel_g').value);
-
-         	// if(dm_g!=1000 && tel_g!=1000 && cs_g==1000){
-         	// 	m[0] = dm_g*4;
-         	// 	m[1] = tel_g*4;
-         	// }
-         	// if(dm_g!=1000 && cs_g!=1000 && tel_g==1000){
-         	// 	m[0] = dm_g*4;
-         	// 	m[1] = cs_g*4;
-         	// }
-         	// if(cs_g!=1000 && tel_g!=1000 && dm_g==1000){
-         	// 	m[0] = cs_g*4;
-         	// 	 m[1] = tel_g*4;
-         	// }
-         	// console.log(m[0]);
-         	// console.log(m[1]);
-         	// let st_g = parseInt(document.getElementById('st_g').value)*4;
-         	// console.log(st_g);
-         	// let nlp_g = parseInt(document.getElementById('nlp_g').value)*4;
-         	// console.log(nlp_g);
-         	// console.log(tel_g);
-         	// let mini_g = parseInt(document.getElementById('mini_g').value)*4;
-         	// console.log(mini_g);
-         	// let dip_g = parseInt(document.getElementById('dip_g').value)*2;
-         	// console.log(dip_g);
-         	// let ps_g = parseInt(document.getElementById('ps_g').value)*2;
-         	// console.log(ps_g);
-         	// let se_g = parseInt(document.getElementById('se_g').value)*4;
-         	// let selab = parseInt(document.getElementById('selab').value)*2;
-         
-         	// let s = m[0] + m[1] + st_g + nlp_g + mini_g + dip_g + ps_g;
-         	alert("Your SGPA : " + (m/15).toFixed(2));
+         	alert("Your SGPA : " + (m/15).toFixed(2) +'😍');
          }
       </script>
    </body>
